@@ -10,8 +10,12 @@ public class Main {
         Dog dog = new Dog ("Fang", true);
         animals.add(cat);
         animals.add(dog);
-        Owner owner = new Owner(animals);
-        owner.feed();
+        Owner myOwner = new Owner(animals);
+        try {
+            myOwner.feed(Food.BONE);
+        } catch (FeedException e) {
+            e.printStackTrace();
+        }
     }
 
 }

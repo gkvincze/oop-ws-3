@@ -25,7 +25,7 @@ public abstract class Animal {
         isMale = male;
     }
     
-    public void feed() {
+    public void feed(Food food) throws FeedException {
         System.out.println("niam niam");
         speak();
     }

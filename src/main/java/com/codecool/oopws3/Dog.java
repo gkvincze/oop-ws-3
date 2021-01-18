@@ -10,4 +10,13 @@ public class Dog extends Animal{
     public void speak() {
         System.out.println("Wuff wuff");
     }
+
+    @Override
+    public void feed(Food food) throws FeedException{
+        if (food==Food.MOUSE) {
+            throw new FeedException(FeedExceptionCode.I_DONT_LIKE_MOUSE);
+        } else {
+            super.feed(food);
+        }
+    }
 }

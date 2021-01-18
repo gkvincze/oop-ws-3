@@ -10,4 +10,13 @@ public class Cat extends Animal{
     public void speak() {
         System.out.println("Meow meow");
     }
+
+    @Override
+    public void feed(Food food) throws FeedException{
+        if (food==Food.BONE) {
+            throw new FeedException(FeedExceptionCode.I_DONT_LIKE_BONE);
+        } else {
+            super.feed(food);
+        }
+    }
 }

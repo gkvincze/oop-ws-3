@@ -10,9 +10,10 @@ public class Owner {
         this.animals = animals;
     }
 
-    public void feed() {
+    public void feed(Food food) throws FeedException {
         for (Animal animal : animals) {
-            animal.feed();
+            animal.feed(food);
         }
+        //animals.forEach(Animal::feed);
     }
 }
